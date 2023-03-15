@@ -88,13 +88,3 @@ where stage_name != 'group stage'
 group by player_team_name) b
 on a.player_team_name = b.player_team_name
 order by 2 desc,3 desc;
-
-select tournament_name
-from Fifa_Goals
-where stage_name = 'final' 
-group by tournament_name;
-
-select *
-from Fifa_Goals
-where stage_name = 'final' or stage_name = 'final round'
-order by 4;  
