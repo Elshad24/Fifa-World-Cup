@@ -10,7 +10,7 @@ group by a.[Player Full Name]
 order by 2 desc;
 
 
---Ranking of Goal Scorers by Country:
+--Ranking of countries by goals scored:
 select a.player_team_name "Country Name", a.[Player Full Name], COUNT(*) "Total Goals",
 COUNT(*) over(partition by a.player_team_name) "Total Goals of Country"
 from (select player_team_name,case
